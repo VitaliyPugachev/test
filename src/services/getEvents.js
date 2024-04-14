@@ -1,12 +1,7 @@
-const baseUrl = 'http://5.35.88.152:6000/';
+const baseUrl = 'http://localhost:5500/';
 
 export const getEvents = async (id) => {
-    const response = await fetch(baseUrl + id, {
-        headers: {
-            'Accept': '*/*',
-            'Content-Type': 'application/json; charset=utf-8'
-        }
-    });
+    const response = await fetch(baseUrl + id);
 
     if (!response.ok) {
         throw Error('Data fetching error!');
